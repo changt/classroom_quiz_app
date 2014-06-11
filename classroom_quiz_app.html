@@ -1,0 +1,56 @@
+<head>
+  <title>classroom_quiz_app</title>
+</head>
+
+<body>
+    {{>loginButtons}}<br><br>
+    {{# if currentUser}}
+        {{> student_view}}
+        {{>classroom_view}}
+        {{>teacher_view}}
+    {{/if}}
+
+</body>
+
+<template name="student_view">
+    <div id = 'main'>
+        <div id='student_title'>
+            Submitting Responses
+        </div>
+        <textarea id = "response"></textarea><br>
+        <button id='send'>
+            Post my response
+        </button>
+    </div>
+</template>
+
+<template name="classroom_view">
+    <div id = 'main'>
+        <div id='classroom_title'>
+            Classroom
+        </div>
+        <div id='Posts'>
+            {{#each lines}}
+            <b>{{this.username}}</b> : {{this.response}}<br>
+            {{/each}}
+        
+        
+        
+        </div>
+    </div>
+</template>
+
+<template name="teacher_view">
+    <div id = 'main'>
+        <div id='teacher_title'>
+            teacher view
+        </div>
+        <div id='teacher_posts'>
+        {{#each lines}}
+        <b>{{this.username}}</b> : {{this.response}}<button class='approve'>approve</button> <button class='delete'>delete</button> <br>
+        {{/each}}
+
+        <button id = 'wipe'>Wipe all Posts</button>
+        </div>
+    </div>
+</template>

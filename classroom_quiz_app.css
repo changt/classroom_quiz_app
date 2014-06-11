@@ -1,0 +1,43 @@
+/* CSS declarations go here */
+#student_title{
+    font-size : 30px;
+
+    
+}
+
+#classroom_title{
+    font-size : 30px;
+    text-align: center;
+}
+
+#teacher_title{
+    font-size : 30px;
+    text-align: center;
+}
+#Posts{
+    font-size: 40px;
+    color : #0000ff;
+    overflow-y: auto;
+    text-align: center;
+    
+    
+}
+
+#response{
+    width : 400px;
+    height: 40px;
+    font-size:15pt;
+    text-align: center;
+}
+#send{
+    width : 400px;
+    height: 40px;
+    font-size: 15pt;
+    text-align: center;
+}
+#teacher_posts{
+    font-size: 20px;
+    color : #ff00ff;
+    overflow-y: auto;
+    text-align: center;
+}
